@@ -27,6 +27,8 @@ digitalElement.innerHTML = `<p>${fixedZero(hours)}:${fixedZero(minute)}:${fixedZ
 
     HElement.style.transform = `rotate(${HDeg}deg)`;
 
+  
+
 }
 
 function fixedZero(time){
@@ -35,3 +37,25 @@ function fixedZero(time){
 
 updateClocktime();
 setInterval(updateClocktime, 1000);
+var clock = document.getElementById('relogio');
+
+
+
+function change(){
+    var sol = document.getElementById('sol');
+    var corpo = document.getElementById('body');
+    let timenow = new Date();
+    let hourss = timenow.getHours(); 
+    if(hourss > 5 & hourss < 19 ){
+        sol.classList.add('sunAnimation');
+       
+            clock.classList.add('ClockAnimation');
+   
+    corpo.classList.add('bodychangeday')}
+    else{
+        corpo.classList.add('Night');
+        console.log(hourss);
+
+
+    }
+}
