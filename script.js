@@ -52,10 +52,5 @@ function change(){
             clock.classList.add('ClockAnimation');
    
     corpo.classList.add('bodychangeday')}
-    else{
-        corpo.classList.add('Night');
-        console.log(hourss);
-
-
-    }
+ 
 }
