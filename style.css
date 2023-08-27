@@ -50,6 +50,25 @@ margin-top: 30px;}
   border-radius: 50%;
 }
 
+.moonAnimation{
+  animation: moonfall 3.5s forwards ease-in-out ; 
+ 
+}
+.Night{
+  animation: Night 3.5s forwards ease-in-out
+}
+@keyframes moonfall{
+  0%{
+    transform: translateY(-400px) ;
+    
+  }
+
+  100%{
+    transform: translateY(600px);
+    
+  }
+}
+
 @keyframes sunBright{
   0%{
     filter: blur(0px);
@@ -79,14 +98,15 @@ margin-top: 30px;}
   }
 }
 
-@keyframes night{
+@keyframes Night{
   from, 5%,30%, 95%, to {
-    background-color:#000000 ;
+    background-color:#1b1e23 ;
   }
   45%, 55% {
     background-color: #d8cece;
   }
  
+
 }
 
 
@@ -124,7 +144,91 @@ margin-top: 30px;}
 }
 
 
-    
+
+#lua{
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  width:310px; height: 310px;
+  background-color: #ffffff;
+  box-shadow: inset -20px 2px 30px #52565a;
+  top: -350px;
+
+}
+#lua::after{
+  content: "";
+  width: 104%;
+  filter: blur(20px);
+  height: 104%;
+  position: absolute;
+  z-index: -1;
+  padding:6px px;
+  border-radius: 50%;
+  position: absolute;
+ 
+  background-color:rgb(255, 255, 255);
+
+
+  box-shadow: 0px 10px 40px #727475;
+ 
+}
+li{
+  background-color:#d0d1d1 ;
+  border-radius: 50%;
+  position: absolute;
+  list-style: none;
+  
+}
+li:nth-child(1){
+  width: 80px;
+  height: 80px;
+  box-shadow: inset 6px -2px 10px 0px #414043;
+  top: 75px;
+  left: 50px;
+
+}
+li:nth-child(2){
+  width: 30px;
+  height: 30px;
+  box-shadow: inset 6px -2px 10px 0px #414043;
+  top: 220px;
+  left: 100px;
+
+}
+li:nth-child(3){
+  width: 55px;
+  height: 55px;
+  box-shadow: inset 6px -2px 10px 0px #414043;
+  top: 120px;
+  left: 200px;
+
+}
+.starscontainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.starAnimation {
+  animation: starss 5s ease infinite; /* Adicionei um valor de duração (5s) */
+}
+
+@keyframes starss {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-600px);
+  }
+}
 
 @media (min-width:500px){
 #relogio{ border: 4px dotted #4b9aaa; width: 300px; height: 300px; border-radius: 50%;} 
@@ -319,4 +423,5 @@ p{margin: 0; text-align: center;}
     width: calc(210px);
     height: calc(210px);
     background:linear-gradient(150deg, #95989c, #1b1e23 );
-    background-size: 300%;}
+    background-size: 300%;}}
+

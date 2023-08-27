@@ -51,6 +51,32 @@ function change(){
        
             clock.classList.add('ClockAnimation');
    
-    corpo.classList.add('bodychangeday')}
+    corpo.classList.add('bodychangeday')}else{
+        var lua = document.getElementById("lua");
+        corpo.classList.add('Night');
+        lua.classList.add('moonAnimation');
+        clock.classList.add("ClockAnimation");
+
+        function makeStars(){
+            var space = document.getElementById("starscontainer");
+            const star = document.createElement("div");
+            star.className = "star";
+            star.classList.add('starAnimation');
+            const size = Math.random() * 3 + "px";
+            star.style.width = size;
+            star.style.height = size;
+        
+            const x = Math.random() * 200;
+            const y = Math.random() * 100;
+            star.style.top = `${y}vw`;
+            star.style.left = `${x}vh` ;
+            
+        space.appendChild(star);
+        }
+        
+        setInterval(makeStars, 100);
+    }
  
 }
+
+
